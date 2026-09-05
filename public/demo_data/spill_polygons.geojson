@@ -1,0 +1,80 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "generator": "SIH27143 Oil Spill Detection System",
+    "timestamp": "2026-09-05T06:00:00Z",
+    "region": "Mumbai Coast, Arabian Sea",
+    "scenario": "Suspected vessel-sourced oil spill near Mumbai harbor"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SPILL-001",
+        "name": "Spill Zone Alpha - Main Source",
+        "area_km2": 14.2,
+        "confidence": 0.94,
+        "severity": "critical",
+        "detected_time": "2026-09-04T18:30:00Z",
+        "updated_time": "2026-09-05T05:45:00Z",
+        "source_vessel": "MT Prestige",
+        "color_hex": "#D32F2F",
+        "description": "Dense oil slick originating from tanker trail, expanding southeast"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [72.80, 18.92], [72.88, 18.90], [72.96, 18.93],
+          [72.98, 18.98], [72.95, 19.05], [72.88, 19.08],
+          [72.82, 19.06], [72.78, 19.00], [72.80, 18.92]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SPILL-002",
+        "name": "Spill Zone Bravo - Sheen",
+        "area_km2": 6.8,
+        "confidence": 0.78,
+        "severity": "moderate",
+        "detected_time": "2026-09-05T02:15:00Z",
+        "updated_time": "2026-09-05T05:30:00Z",
+        "source_vessel": "Hanjin Container",
+        "color_hex": "#FF9800",
+        "description": "Thin sheen pattern, possible dispersant application zone"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [72.90, 18.96], [72.97, 18.94], [73.04, 18.97],
+          [73.06, 19.03], [73.02, 19.08], [72.94, 19.10],
+          [72.88, 19.06], [72.90, 18.96]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SPILL-003",
+        "name": "Spill Zone Charlie - Drift",
+        "area_km2": 3.1,
+        "confidence": 0.65,
+        "severity": "low",
+        "detected_time": "2026-09-05T04:00:00Z",
+        "updated_time": "2026-09-05T05:50:00Z",
+        "source_vessel": "Unknown - drifting",
+        "color_hex": "#FFC107",
+        "description": "Residual drift patch, likely already dispersed"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [72.75, 18.98], [72.82, 18.96], [72.88, 18.99],
+          [72.89, 19.04], [72.84, 19.07], [72.77, 19.05],
+          [72.75, 18.98]
+        ]]
+      }
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "generator": "SIH27143 AIS Correlation Engine",
+    "timestamp": "2026-09-05T06:00:00Z",
+    "region": "Mumbai Port Approaches",
+    "time_window": "2026-09-04T12:00:00Z to 2026-09-05T06:00:00Z",
+    "vessels_tracked": 47
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "mmsi": "119010123",
+        "name": "MT Prestige",
+        "flag": "Panama",
+        "type": "Tanker",
+        "length_m": 245,
+        "width_m": 42,
+        "speed_knots": 3.2,
+        "heading": 180,
+        "course": 182,
+        "status": "Under way using engine",
+        "draught_m": 12.5,
+        "destination": "Jawaharlal Nehru Port",
+        "eta": "2026-09-05T14:30:00Z",
+        "last_seen": "2026-09-05T05:58:00Z",
+        "confidence": 0.96,
+        "color_hex": "#1565C0",
+        "spill_risk": "HIGH - Correlated with SPILL-001",
+        "description": "Suspected source vessel - reduced speed near spill origin",
+        "alert_level": "RED"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [72.78, 18.88], [72.80, 18.90], [72.82, 18.92],
+          [72.84, 18.94], [72.86, 18.95], [72.88, 18.96],
+          [72.90, 18.97], [72.92, 18.98], [72.94, 18.98]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mmsi": "241010456",
+        "name": "Hanjin Container",
+        "flag": "Singapore",
+        "type": "Container Ship",
+        "length_m": 334,
+        "width_m": 45,
+        "speed_knots": 14.8,
+        "heading": 90,
+        "course": 88,
+        "status": "Under way using engine",
+        "draught_m": 14.2,
+        "destination": "Port Klang, Malaysia",
+        "eta": "2026-09-06T08:15:00Z",
+        "last_seen": "2026-09-05T05:55:00Z",
+        "confidence": 0.91,
+        "color_hex": "#2E7D32",
+        "spill_risk": "MEDIUM - Possible secondary source",
+        "description": "High-speed container ship passing through monitoring zone",
+        "alert_level": "ORANGE"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [72.80, 19.02], [72.85, 19.01], [72.90, 19.00],
+          [72.95, 18.99], [73.00, 18.98], [73.05, 18.97],
+          [73.10, 18.96], [73.15, 18.95]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mmsi": "366542180",
+        "name": "ICGS Samar",
+        "flag": "India",
+        "type": "Patrol Vessel",
+        "length_m": 105,
+        "width_m": 12,
+        "speed_knots": 18.5,
+        "heading": 270,
+        "course": 272,
+        "status": "Under way using engine",
+        "draught_m": 3.8,
+        "destination": "On Patrol",
+        "last_seen": "2026-09-05T05:59:00Z",
+        "confidence": 0.98,
+        "color_hex": "#D32F2F",
+        "spill_risk": "RESPONDER - CG intercept vessel",
+        "description": "Indian Coast Guard vessel moving to intercept position",
+        "alert_level": "BLUE"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [72.95, 19.05], [72.90, 19.05], [72.85, 19.05],
+          [72.80, 19.05], [72.75, 19.05], [72.70, 19.05]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mmsi": "419000678",
+        "name": "Sea Hawk Guardian",
+        "flag": "India",
+        "type": "Supply Vessel",
+        "length_m": 78,
+        "width_m": 15,
+        "speed_knots": 12.3,
+        "heading": 360,
+        "course": 2,
+        "status": "Under way using engine",
+        "draught_m": 5.2,
+        "destination": "Mumbai Anchorage",
+        "last_seen": "2026-09-05T05:57:00Z",
+        "confidence": 0.93,
+        "color_hex": "#1976D2",
+        "spill_risk": "MONITOR - Spill response vessel",
+        "description": "Response vessel deploying containment boom",
+        "alert_level": "GREEN"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [72.88, 18.92], [72.88, 18.95], [72.88, 18.98],
+          [72.88, 19.01], [72.88, 19.04], [72.88, 19.07]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mmsi": "538000452",
+        "name": "Ever Given",
+        "flag": "Panama",
+        "type": "Container Ship",
+        "length_m": 399,
+        "width_m": 59,
+        "speed_knots": 16.2,
+        "heading": 45,
+        "course": 43,
+        "status": "Under way using engine",
+        "draught_m": 16.0,
+        "destination": "Suez Canal",
+        "eta": "2026-09-07T03:20:00Z",
+        "last_seen": "2026-09-05T05:50:00Z",
+        "confidence": 0.89,
+        "color_hex": "#6A1B9A",
+        "spill_risk": "LOW - Transiting clear of zone",
+        "description": "Large container ship on normal transit route",
+        "alert_level": "GREY"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [72.60, 18.70], [72.68, 18.75], [72.76, 18.80],
+          [72.84, 18.85], [72.92, 18.90], [73.00, 18.95]
+        ]
+      }
+    }
+  ]
+}
