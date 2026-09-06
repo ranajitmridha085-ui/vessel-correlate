@@ -12,9 +12,9 @@ from datetime import datetime, timedelta
 import folium
 import folium.plugins
 import streamlit as st
+import streamlit.components.v1 as components
 from folium import Element
 from folium.plugins import MiniMap, Fullscreen
-from streamlit_folium import st_folium
 
 # ============================================================================
 # Constants & Configuration
@@ -1283,7 +1283,7 @@ def main() -> None:
     m = build_map(data)
     MiniMap(toggle_display=True, position="bottomright").add_to(m)
     Fullscreen(position="topleft").add_to(m)
-    st_folium(m, use_container_width=True, height=500, returned_objects=[], key=st.session_state["map_key"])
+    components.html(m._repr_html_(), height=500)
 
     # Alert queue tabs
     st.divider()
