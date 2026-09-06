@@ -1231,13 +1231,32 @@ def main() -> None:
     # Authenticated — render dashboard
     render_sidebar()
 
-    # Load data
-    try:
-        data = get_demo_data()
-        telemetry = compute_telemetry(data)
-    except Exception as e:
-        st.error(f"❌ Data loading failed: {e}")
-        return
+    # Initialize session state for data loading
+    if "data_loaded" not in st.session_state:
+        st.session_state["data_loaded"] = False
+
+    # Load data with spinner on first load, use cached data on subsequent runs
+    if not st.session_state["data_loaded"]:
+        with st.spinner("Loading map data..."):
+            try:
+                data = get_demo_data()
+                telemetry = compute_telemetry(data)
+                st.session_state["demo_data"] = data
+                st.session_state["telemetry"] = telemetry
+                st.session_state["data_loaded"] = True
+                st.rerun()  # Re-run to render with loaded data
+            except Exception as e:
+                st.error(f"❌ Data loading failed: {e}")
+                return
+    else:
+        # Use cached data from session state
+        data = st.session_state["demo_data"]
+        telemetry = st.session_state["telemetry"]
+
+    # Guard: wait until data is fully loaded before rendering
+    if not st.session_state["data_loaded"]:
+        st.info("⏳ Preparing investigation data...")
+        st.stop()
 
     # Page header
     st.markdown(
@@ -1253,7 +1272,7 @@ def main() -> None:
     # Telemetry bar
     render_telemetry_bar(telemetry)
 
-    # Map viewport
+    # Map viewport - only render after data is confirmed loaded
     st.divider()
     st.markdown("### 🗺️ Investigation Map")
     m = build_map(data)
