@@ -6,6 +6,7 @@ Vessel Correlate Platform — Production Frontend (Audit-Fixed)
 import hashlib
 import json
 import os
+import uuid
 from datetime import datetime, timedelta
 
 import folium
@@ -1235,6 +1236,10 @@ def main() -> None:
     if "data_loaded" not in st.session_state:
         st.session_state["data_loaded"] = False
 
+    # Initialize session state for map key (forces redraw on refresh)
+    if "map_key" not in st.session_state:
+        st.session_state["map_key"] = uuid.uuid4().hex
+
     # Load data with spinner on first load, use cached data on subsequent runs
     if not st.session_state["data_loaded"]:
         with st.spinner("Loading map data..."):
@@ -1278,7 +1283,7 @@ def main() -> None:
     m = build_map(data)
     MiniMap(toggle_display=True, position="bottomright").add_to(m)
     Fullscreen(position="topleft").add_to(m)
-    st_folium(m, use_container_width=True, height=500, returned_objects=[])
+    st_folium(m, use_container_width=True, height=500, returned_objects=[], key=st.session_state["map_key"])
 
     # Alert queue tabs
     st.divider()
